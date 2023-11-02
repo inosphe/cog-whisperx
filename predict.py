@@ -42,5 +42,5 @@ class Predictor(BasePredictor):
                 return ''.join([val.text for val in result['segments']])
             if debug:
                 print(f"max gpu memory allocated over runtime: {torch.cuda.max_memory_reserved() / (1024 ** 3):.2f} GB")
-        return json.dumps(result['segments'])
+        return json.dumps(result)
 
